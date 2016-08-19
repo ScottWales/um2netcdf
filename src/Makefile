@@ -53,8 +53,7 @@ OBJS =	util.o stashfile_operations.o umfile_operations.o interp.o \
 ## Define the name and location of the um2netcdf binary 
 ##-----------------------------------------------------------------------------
 
-BINARY_DIR=/hpcf/working/cheesemanmp/um2netcdf/NZCSM_CHECK/surface
-#BINARY_DIR=/opt/niwa/um2netcdf/AIX/devel
+BINARY_DIR=.
 
 ##-----------------------------------------------------------------------------
 ## Global Compile Rules

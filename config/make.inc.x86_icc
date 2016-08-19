@@ -1,0 +1,41 @@
+## MAKE SETTINGS
+##
+##  Makefile settings for the x86 architecture and the Intel compiler suite.
+##
+##=============================================================================
+
+##-----------------------------------------------------------------------------
+## Compiler definitions
+##-----------------------------------------------------------------------------
+
+CC = icc 
+RANLIB = ranlib 
+OPT_FLAGS = -O3 -g -Wall
+
+
+##-----------------------------------------------------------------------------
+## Application definitions
+##-----------------------------------------------------------------------------
+
+CPPFLAGS = 
+
+##-----------------------------------------------------------------------------
+## External library definitions
+##-----------------------------------------------------------------------------
+
+NETCDF_ROOT=
+NETCDF_INC=
+NETCDF_LIB=-lnetcdf
+
+XML2_ROOT=
+XML2_INC=$(shell pkg-config libxml-2.0 --cflags)
+XML2_LIB=$(shell pkg-config libxml-2.0 --libs)
+
+
+ZLIB_ROOT=
+ZLIB_INC=
+ZLIB_LIB=-lz
+
+INCS = ${NETCDF_INC} ${XML2_INC} ${ZLIB_INC} 
+LIBS = ${NETCDF_LIB} ${XML2_LIB} ${ZLIB_LIB}
+
